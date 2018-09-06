@@ -23,9 +23,10 @@ public class NastySurprise implements ActionListener{
 		panel.add(label);
 		panel.add(BTreat);
 		label.setText("or");
-		BTrick.setText("Trick!");
+		BTrick.setText("Treat!");
 		BTreat.setText("Treat!");
 		frame.pack();
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		BTrick.addActionListener(this);
 		BTreat.addActionListener(this);
@@ -40,14 +41,16 @@ public class NastySurprise implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		JButton buttonPressed = ;
+		JButton buttonPressed = (JButton) e.getSource();
 		// TODO Auto-generated method stub
-		if(buttonPressed == BTrick) {
-			showPictureFromTheInternet("");
+		if(buttonPressed == BTreat) {
+			showPictureFromTheInternet("http://www.petsworld.in/blog/wp-content/uploads/2014/09/cute-white-puppy.jpg");
+		frame.pack();
 		}
 		
 		else{
-			
+			showPictureFromTheInternet("http://www.petsworld.in/blog/wp-content/uploads/2014/09/driving.jpg");
+			frame.pack();
 		}
 	}
 	
