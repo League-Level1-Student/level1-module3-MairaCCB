@@ -122,10 +122,11 @@ public class Jeopardy implements ActionListener {
 		// If the buttonPressed was the secondButton
 			else if(buttonPressed == secondButton) {
 		// Call the askQuestion() method with a harder question
-				askQuestion();
+				askQuestion("True or false, a toad needs to live near water to live.", "False", 400);
 			}
 		// Clear the text on the button that was pressed (set the button text to
 		// nothing)
+			
 
 	}
 
@@ -133,14 +134,14 @@ public class Jeopardy implements ActionListener {
 
 		// Use the playJeopardyTheme() method to play music while the use thinks of an
 		// answer
-
+		playJeopardyTheme();
 		// Remove this temporary message and replace it with a pop-up that asks the user
 		// the question
-		JOptionPane.showMessageDialog(null, "this is where the question will be asked");
-
+		//JOptionPane.showMessageDialog(null, "this is where the question will be asked");
+		JOptionPane.showMessageDialog(null, "");
 		// Stop the theme music when they have entered their response. Hint: use the
 		// sound variable
-
+		
 		// If the answer is correct
 
 		// Increase the score by the prizeMoney
