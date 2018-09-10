@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 public class Jeopardy implements ActionListener {
 	private JButton firstButton;
 	private JButton secondButton;
-	private JButton thirdButton, fourthButton;
+	private JButton thirdButton, fourthButton, fifthButton;
 	private JPanel quizPanel;
 	private int score = 0;
 	private JLabel scoreBox = new JLabel("0");
@@ -61,15 +61,26 @@ public class Jeopardy implements ActionListener {
 		
 		// 9. Use the secondButton variable to hold a button using the createButton
 		// method
-
+		secondButton = createButton("400");
 		// 10. Add the secondButton to the quizPanel
-
+		quizPanel.add(secondButton);
 		// 11. Add action listeners to the buttons (2 lines of code)
-
+		firstButton.addActionListener(this);
+		secondButton.addActionListener(this);
 		// 12. Write the code to complete the actionPerformed() method below
-
+		
 		// 13. Add buttons so that you have $200, $400, $600, $800 and $1000 questions
-
+		thirdButton = createButton("600");
+		fourthButton = createButton("800");
+		fifthButton = createButton("1000");
+		
+		thirdButton.addActionListener(this);
+		fourthButton.addActionListener(this);
+		fifthButton.addActionListener(this);
+		
+		quizPanel.add(thirdButton);
+		quizPanel.add(fourthButton);
+		quizPanel.add(fifthButton);
 		/*
 		 * [optional] Use the showImage or playSound methods when the user answers a
 		 * question
@@ -89,7 +100,7 @@ public class Jeopardy implements ActionListener {
 		// Set the text of the button to the dollarAmount
 		button.setText(dollarAmount);
 		// Increment the buttonCount (this should make the layout vertical)
-		buttonCount ++;
+		buttonCount++;
 		// Return your new button instead of the temporary button
 		return new JButton(dollarAmount);
 		//return new JButton("temporary button");
@@ -102,16 +113,17 @@ public class Jeopardy implements ActionListener {
 
 		JButton buttonPressed = (JButton) e.getSource();
 		// If the buttonPressed was the firstButton
-
-		// Call the askQuestion() method
-
+			if(buttonPressed == firstButton) {
+		// Call[ the askQuestion() method
+				askQuestion("True or false, a bacillus lizard can run on water.", "True", 200 );
 		// Complete the code in the askQuestion() method. When you play the game, the
 		// score should change.
-
+			}
 		// If the buttonPressed was the secondButton
-
+			else if(buttonPressed == secondButton) {
 		// Call the askQuestion() method with a harder question
-
+				askQuestion();
+			}
 		// Clear the text on the button that was pressed (set the button text to
 		// nothing)
 
