@@ -101,7 +101,7 @@ public class SimonSays extends KeyAdapter {
 		// 12. Create a new instance of Random
 		Random r = new Random();
 		// 13. Use the Random and the speak method to either say
-		// "Simon says press this key" or "Press this key"
+		// "Summon says press this key" or "Press this key"
 		int ran = r.nextInt(2);
 
 		if (ran == 0) {

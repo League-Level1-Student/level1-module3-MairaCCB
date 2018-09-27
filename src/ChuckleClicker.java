@@ -41,13 +41,14 @@ public class ChuckleClicker implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		 JButton buttonPressed = (JButton) e.getSource();
-		 if(buttonPressed == LButton) {
-			 JOptionPane.showMessageDialog(null, "What do you call a fish without eyes?");
-			 JOptionPane.showMessageDialog(null, "A fsh.");
-		 }
-		 
-		 else {
-			 JOptionPane.showMessageDialog(null, "Hi");
-		 }
+		if(buttonPressed == LButton) {
+			JOptionPane.showMessageDialog(null, "What do you call a fish wihtout eyes?");
+			JOptionPane.showMessageDialog(null, "a fsh");
+		}
+		
+		else {
+			JOptionPane.showMessageDialog(null, "What");
+		}
 	}
 }
+
