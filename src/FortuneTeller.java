@@ -38,7 +38,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 	static void begin() {
 		// 3. Welcome the user. Give them a hint for the secret location.
 		// OPTIONAL: ask the user for their name and at it to the code below.
-		System.out.println("Welcome, I don't know what I am supposed to write here.");
+		System.out.println("Welcome, I shall tell you your future.");
 	}
 
 	@Override
@@ -51,8 +51,8 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 		// 6. Add the mouseY variable to the previous line so that it prints out too (no
 		// new line)
 		// 7. Adjust your secret location coordinates here:
-		int secretLocationX = 0;
-		int secretLocationY = 0;
+		int secretLocationX = 70;
+		int secretLocationY = 235;
 		/**
 		 * If the mouse coordinates and secret location are close, we'll let them ask a
 		 * question.
@@ -60,15 +60,16 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 		if (areClose(mouseX, secretLocationX) && areClose(mouseY, secretLocationY)) {
 			// 8. Get the user to enter a question for the fortune teller
 			System.out.println("Ask me a question.");
+			String question = JOptionPane.showInputDialog("");
+			System.out.println("I don't have an answer to this,");
 			// 9. Find a spooky sound and put it in your default package (freesound.org)
 			// AudioClip sound =
-			// JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
 			// 10. Play the sound
-
+			JApplet.newAudioClip(getClass().getResource("creepy-noise.wav"));
 			// 11. Use the pause() method below to wait until your music has finished
-
+			pause(5);
 			// 12. Insert your completed Magic 8 ball recipe (http://bit.ly/Zdrf6d) here
-
+			//can't find it because of the new modules added
 		}
 
 	}
@@ -85,7 +86,7 @@ public class FortuneTeller extends JPanel implements Runnable, MouseListener {
 		}
 	}
 
-	/**************** don't worry about the stuff under here *******************/
+	/**************** don't worry about the code under here *******************/
 
 	BufferedImage fortuneTellerImage;
 
