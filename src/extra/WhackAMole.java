@@ -1,5 +1,6 @@
 package extra;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -17,6 +18,14 @@ public class WhackAMole {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setTitle("Whack a Button for Fame and Glory");
 		frame.add(panel);
+		frame.setSize(500, 500);
+		
+		for(int i = 0; i < 24; i++) {
+			JButton button = new JButton();
+			panel.add(button);
+		}
+		
+		
 		
 	}
 }
